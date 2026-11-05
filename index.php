@@ -205,6 +205,8 @@ if ($is_admin) {
 }
 
 
+
+
 //if else statement
 $x = 10;
 $y = 20;
@@ -215,3 +217,68 @@ if ($x > $y) {
 } else {
     echo '$x is equal to $y' . PHP_EOL;
 }
+
+
+
+//switch statement
+$role = 'subscriber';
+$message = '';
+
+if ('admin' === $role) {
+	$message = 'Welcome, admin!';
+} elseif ('editor' === $role) {
+	$message = 'Welcome! You have some pending articles to edit';
+} elseif ('author' === $role) {
+	$message = 'Welcome! Do you want to publish the draft article?';
+} elseif ('subscriber' === $role) {
+	$message = 'Welcome! Check out some new articles.';
+} else {
+	$message = 'Sorry! You are not authorized to access this page';
+}
+
+echo $message . PHP_EOL;
+
+
+
+
+//foreach statement
+$fruits = ['apple', 'banana', 'orange'];
+foreach ($fruits as $fruit) {
+    echo $fruit . PHP_EOL;
+}
+
+
+$capitals = [
+	'Japan' => 'Tokyo',
+	'France' => 'Paris',
+	'Germany' => 'Berlin',
+	'United Kingdom' => 'London',
+	'United States' => 'Washington D.C.'
+];
+
+foreach ($capitals as $country => $capital) {
+	echo "The capital city of $country is $capital" . PHP_EOL;
+}
+
+
+//function
+function welcome_user($username)
+{
+	echo 'Welcome ' . $username . PHP_EOL;
+}
+
+welcome_user('Guest');
+
+
+
+//function parameters
+$counter = 1;
+function increment_counter($counter)
+{
+	$counter++;
+	return $counter;
+}
+echo increment_counter($counter) . PHP_EOL; 
+
+
+
