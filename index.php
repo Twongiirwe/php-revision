@@ -280,5 +280,12 @@ function increment_counter($counter)
 }
 echo increment_counter($counter) . PHP_EOL; 
 
+//type hints
+function add($a, $b)
+{
+    return $a + $b;
+}
+$result = add(5, 10);
+echo $result . PHP_EOL;
 
 
